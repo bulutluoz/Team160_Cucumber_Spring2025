@@ -9,7 +9,7 @@
       Then arama sonucunda urun bulunabildigini test eder
       And sayfayi kapatir
 
-
+    @smoke @kullaniciE2E @regression @system
     Scenario: TC05 kullanici furniture aratabilmeli
 
       Given kullanici testotomasyonu anasayfaya gider

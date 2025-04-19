@@ -66,4 +66,18 @@ public class TestotomasyonuStepdefinition {
         }
 
     }
+
+    @Then("ilk urunu tiklar")
+    public void ilk_urunu_tiklar() {
+        testotomasyonuPage.bulunanUrunElementleriList.get(0).click();
+    }
+
+    @Then("ilk urun isminde case sensitive olmadan {string} bulundugu test eder")
+    public void ilk_urun_isminde_case_sensitive_olmadan_bulundugu_test_eder(String arananUrunIsmi) {
+
+        String actualIlkUrunIsmi = testotomasyonuPage.urunSayfasindakiIsimElementi.getText().toLowerCase();
+        System.out.println(actualIlkUrunIsmi);
+        Assertions.assertTrue(actualIlkUrunIsmi.contains(arananUrunIsmi));
+
+    }
 }
